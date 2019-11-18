@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Sign in</title>
+    {% load static %}
+    <link rel ="stylesheet" href="{% static '/style.css' %}"  type="text/css">
+</head>
+
+<body>
+ <img src="{% static 'logo.png' %}" tyle="width:50px ; height:50px;">
+
+  <div class="main">
+    <p class="sign" align="center">Register Employee </p>
+
+
+
+    <form class="form1" method = "POST" action ="/index">
+      {% csrf_token %}
+
+      <label> Employee ID</label>
+      {{form.Employee_ID}}
+      <br><br>
+
+
+      <label>Employee Name</label>
+      {{form.Employee_Name}}
+      <br><br>
+
+
+      <label> Employee Email</label>
+       {{form.Employee_Email}}
+      <br><br>
+
+
+      <label></label>
+      <input type="file" name="pic" accept="image/*"><br>
+
+      <br>
+
+      <button type ="submit" align="center">Register</button>
+
+
+
+    </form>
+
+
+    </div>
+
+</body>
+
+</html>
